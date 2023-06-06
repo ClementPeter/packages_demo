@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:packages_demo/homepage.dart';
+// import 'package:packages_demo/homepage.dart';
 import 'package:packages_demo/smooth_scrolling.dart';
 
 void main() {
