@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:packages_demo/homepage.dart';
+import 'package:packages_demo/smooth_scrolling.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Packages Demo'),
+      //home: const MyHomePage(title: 'Packages Demo'),
+      home: ScrollingIndicatorPage(),
     );
   }
 }
