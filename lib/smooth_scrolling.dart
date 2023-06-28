@@ -46,7 +46,7 @@ class ScrollingIndicatorPage extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               //key feature
               SmoothPageIndicator(
                 controller: controller,
