@@ -7,21 +7,22 @@ class ScrollingIndicatorPage extends StatelessWidget {
 
   final controller = PageController(keepPage: true);
 
+  //pages to be scrolled through
   final pages = List.generate(
     6,
     (index) => Container(
       height: 200,
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
         color: Colors.grey.shade300,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(10),
         ),
       ),
       child: Center(
         child: Text(
           "Page $index",
-          style: TextStyle(color: Colors.indigo, fontSize: 22),
+          style: const TextStyle(color: Colors.indigo, fontSize: 22),
         ),
       ),
     ),

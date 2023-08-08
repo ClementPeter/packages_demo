@@ -22,18 +22,34 @@ class TimeLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          // TimeLine()
-          TimelineTile(
-            isFirst: true,
-          ),
-          TimelineTile(),
-          TimelineTile(),
-          MyTimeLineTile(isFirst: false, isLast: false, isPast: true),
-          MyTimeLineTile(isFirst: false, isLast: false, isPast: true),
-          MyTimeLineTile(isFirst: false, isLast: true, isPast: false),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 100),
+        child: ListView(
+          physics: BouncingScrollPhysics(),
+          children: [
+            // TimeLine()
+            // TimelineTile(
+            //   isFirst: true,
+            // ),
+            // TimelineTile(),
+            // TimelineTile(),
+            MyTimeLineTile(
+                isFirst: true,
+                isLast: false,
+                isComplete: true,
+                child: 'ORDER PLACED'),
+            MyTimeLineTile(
+                isFirst: false,
+                isLast: false,
+                isComplete: true,
+                child: 'ORDER RECEIVED'),
+            MyTimeLineTile(
+                isFirst: false,
+                isLast: true,
+                isComplete: false,
+                child: 'ORDER RECEIVED'),
+          ],
+        ),
       ),
     );
   }
