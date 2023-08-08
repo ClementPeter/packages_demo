@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:packages_demo/smooth_scrolling.dart';
+import 'package:packages_demo/timeline/timeline.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -17,6 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
@@ -38,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ScrollingIndicatorPage(),
+                    builder: (context) => TimeLine(),
                   ),
                 );
               },

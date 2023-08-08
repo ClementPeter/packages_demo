@@ -17,9 +17,19 @@ class MyTimeLineTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TimelineTile(
-      isFirst: isFirst,
-      isLast: isLast,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 100),
+      child: TimelineTile(
+        isFirst: isFirst,
+        isLast: isLast,
+        //endChild: const Text('home'),
+        //beforeLineStyle: ,
+        beforeLineStyle: LineStyle(color: Colors.red),
+        indicatorStyle: IndicatorStyle(
+          color: Colors.deepPurple,
+          indicator: Icon(Icons.check),
+        ),
+      ),
     );
   }
 }
