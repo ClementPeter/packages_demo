@@ -31,7 +31,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: const Text("Reorderable List"),
+              child: const Text("Smooth Scrolling List"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ScrollingIndicatorPage(),
+                  ),
+                );
+              },
+              child: const Text("Timeline"),
             ),
           ],
         ),
