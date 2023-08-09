@@ -22,7 +22,9 @@ This is me trying out various essential pacakges that will / would be useful as 
 
 ### Packages playground 
 
-> [**HIVE**] App Persisitence and Storage (https://pub.dev/packages/hive)
-> [**Smooth Page Indicator**] Carousel scrolling  (https://pub.dev/packages/smooth_page_indicator)
+> [**HIVE**](https://pub.dev/packages/hive)
+
+> [**Smooth Page Indicator**](https://pub.dev/packages/smooth_page_indicator)
+
 > [**Timeline_title**](https://pub.dev/packages/timeline_tile)
 
