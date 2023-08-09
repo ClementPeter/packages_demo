@@ -20,10 +20,9 @@ samples, guidance on mobile development, and a full API reference.
 
 This is me trying out various essential pacakges that will / would be useful as I build production Apps
 
+### Packages playground 
 
+> [**HIVE**] App Persisitence and Storage (https://pub.dev/packages/hive)
+> [**Smooth Page Indicator**] Carousel scrolling  (https://pub.dev/packages/smooth_page_indicator)
+> [**Timeline_title**](https://pub.dev/packages/timeline_tile)
 
-### pub.dev Packages
-
-> CREATE READ AND DELETE OPERATION isng SQflite
-
-> HIVE DB : App Persisitence and Storage
