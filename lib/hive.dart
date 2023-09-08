@@ -81,7 +81,7 @@ class _HivePageState extends State<HivePage> {
 
   //controllers
   final TextEditingController _nameController = TextEditingController();
-  TextEditingController _quantityController = TextEditingController();
+  final TextEditingController _quantityController = TextEditingController();
 
   //show form bottom modal sheet
   void showForm(BuildContext ctx, int? itemKey) async {

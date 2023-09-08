@@ -28,3 +28,5 @@ This is me trying out various essential pacakges that will / would be useful as 
 
 > [**Timeline_title**](https://pub.dev/packages/timeline_tile)
 
+> [**Shared preference**](https://pub.dev/packages/shared_preferences)
+

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:packages_demo/timeline/timeline_event.dart';
 import 'package:timeline_tile/timeline_tile.dart';

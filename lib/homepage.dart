@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:packages_demo/shared_preference1.dart';
+import 'package:packages_demo/shared_preference2.dart';
 import 'package:packages_demo/smooth_scrolling.dart';
 import 'package:packages_demo/timeline/timeline.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -40,11 +43,39 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TimeLine(),
+                    builder: (context) => const TimeLine(),
                   ),
                 );
               },
               child: const Text("Timeline"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SharedPreference1(
+                      title: 'Shared pref1',
+                    ),
+                  ),
+                );
+              },
+              //Shared pref. has multiple demo
+              child: const Text("Shared preference 1"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SharedPreference2(
+                      title: 'Shared pref 2',
+                    ),
+                  ),
+                );
+              },
+              //Shared pref. has multiple demo
+              child: const Text("Shared preference 2"),
             ),
           ],
         ),
