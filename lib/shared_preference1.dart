@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // DEMO SHARED PREFERENCE - PERSONAL
-
 class SharedPreference1 extends StatefulWidget {
   const SharedPreference1({super.key, required this.title});
 
