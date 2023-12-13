@@ -43,7 +43,8 @@ class _ImagePicker1State extends State<ImagePicker1> {
         await picker.pickImage(source: ImageSource.camera);
 
     setState(() {
-      _selectedImage = File(pickedCameraImage!.path);
+      if (pickedCameraImage == null) return;
+      _selectedImage = File(pickedCameraImage.path);
       _logger.i('selected Image path from camera:::$_selectedImage');
       _logger.i('Image path from camera:::${pickedCameraImage.path}');
     });
@@ -77,7 +78,9 @@ class _ImagePicker1State extends State<ImagePicker1> {
               ),
               const SizedBox(height: 20),
               _selectedImage != null
-                  ? Image.file(_selectedImage!)
+                  ? SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.4,
+                      child: Image.file(_selectedImage!))
                   : const Text('Please select an Image')
             ],
           ),

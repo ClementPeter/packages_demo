@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:packages_demo/image_picker1.dart';
+import 'package:packages_demo/image_picker_multiple.dart';
 import 'package:packages_demo/shared_preference1.dart';
 import 'package:packages_demo/shared_preference2.dart';
 import 'package:packages_demo/smooth_scrolling.dart';
@@ -91,6 +92,20 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               //Image Picker has multiple demo
               child: const Text("Image picker"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ImagePickerMultiple(
+                      title: 'Image Picker Multiple - Gallery',
+                    ),
+                  ),
+                );
+              },
+              //Image Picker has multiple demo
+              child: const Text("Multiple Image picker"),
             ),
           ],
         ),
