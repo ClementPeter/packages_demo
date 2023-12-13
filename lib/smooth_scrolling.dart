@@ -11,6 +11,7 @@ class ScrollingIndicatorPage extends StatelessWidget {
   final pages = List.generate(
     6,
     (index) => Container(
+      width: 299,
       height: 200,
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
@@ -33,28 +34,35 @@ class ScrollingIndicatorPage extends StatelessWidget {
     //return const Placeholder();
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SizedBox(height: 10),
-              SizedBox(
-                height: 240,
-                child: PageView.builder(
-                  controller: controller,
-                  itemCount: pages.length,
-                  itemBuilder: (context, index) {
-                    return pages[index];
-                  },
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+            Expanded(
+              //not ideal design-wise
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 240,
+                      child: PageView.builder(
+                        controller: controller,
+                        itemCount: pages.length,
+                        itemBuilder: (context, index) {
+                          return pages[index];
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    //key feature
+                    SmoothPageIndicator(
+                      controller: controller,
+                      count: pages.length,
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 10),
-              //key feature
-              SmoothPageIndicator(
-                controller: controller,
-                count: pages.length,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

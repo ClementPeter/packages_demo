@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:packages_demo/image_picker1.dart';
 import 'package:packages_demo/shared_preference1.dart';
 import 'package:packages_demo/shared_preference2.dart';
 import 'package:packages_demo/smooth_scrolling.dart';
@@ -76,6 +77,20 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               //Shared pref. has multiple demo
               child: const Text("Shared preference 2"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ImagePicker1(
+                      title: 'Image Picker Gallery and Camera',
+                    ),
+                  ),
+                );
+              },
+              //Image Picker has multiple demo
+              child: const Text("Image picker"),
             ),
           ],
         ),
