@@ -17,8 +17,8 @@ class _ImagePickerMultipleState extends State<ImagePickerMultiple> {
   ///Holds Multiple Images
   final List<XFile> _selectedMultipleImage = [];
 
-  ///Awon Picker
-  Future pickMultipleImage() async {
+  ///Awon Agba Picker
+  Future pickMultipleImages() async {
     final ImagePicker picker = ImagePicker();
 
     final List<XFile> pickedMultipleImages = await picker.pickMultiImage();
@@ -54,7 +54,7 @@ class _ImagePickerMultipleState extends State<ImagePickerMultiple> {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  pickMultipleImage();
+                  pickMultipleImages();
                 },
                 child: const Text('Pick Multiple Images from Gallery'),
               ),
