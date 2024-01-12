@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:packages_demo/image_picker1.dart';
+import 'package:packages_demo/image_picker_single.dart';
 import 'package:packages_demo/image_picker_multiple.dart';
 import 'package:packages_demo/shared_preference1.dart';
 import 'package:packages_demo/shared_preference2.dart';
@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ImagePicker1(
+                    builder: (context) => const ImagePickerSingle(
                       title: 'Image Picker Gallery and Camera',
                     ),
                   ),

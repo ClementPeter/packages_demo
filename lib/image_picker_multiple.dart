@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:logger/logger.dart';
 
+//Image picker has underlying code to be added for IOS only -> info.plist
 class ImagePickerMultiple extends StatefulWidget {
   final String title;
   const ImagePickerMultiple({required this.title, super.key});

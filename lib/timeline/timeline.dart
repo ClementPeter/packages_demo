@@ -21,7 +21,7 @@ class TimeLine extends StatelessWidget {
             MyTimeLineTile(
               isFirst: false,
               isLast: false,
-              isComplete: true,
+              isComplete: false,
               child: 'ORDER RECEIVED',
             ),
             MyTimeLineTile(

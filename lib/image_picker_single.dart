@@ -4,21 +4,21 @@ import 'package:image_picker/image_picker.dart';
 import 'package:logger/logger.dart';
 
 //Image picker has underlying code to be added for IOS only -> info.plist
-class ImagePicker1 extends StatefulWidget {
+class ImagePickerSingle extends StatefulWidget {
   final String title;
-  const ImagePicker1({required this.title, super.key});
+  const ImagePickerSingle({required this.title, super.key});
 
   @override
-  State<ImagePicker1> createState() => _ImagePicker1State();
+  State<ImagePickerSingle> createState() => _ImagePickerSingleState();
 }
 
 final _logger = Logger();
 
-class _ImagePicker1State extends State<ImagePicker1> {
+class _ImagePickerSingleState extends State<ImagePickerSingle> {
   ///Hold our Image file
   File? _selectedImage;
 
-  ///Pick from camera
+  ///Pick from gallery
   Future pickImageFromGallery() async {
     final ImagePicker picker = ImagePicker();
 
@@ -37,6 +37,7 @@ class _ImagePicker1State extends State<ImagePicker1> {
     });
   }
 
+  ///Pick from camera
   Future pickImageFromCamera() async {
     final ImagePicker picker = ImagePicker();
     final XFile? pickedCameraImage =
@@ -80,7 +81,8 @@ class _ImagePicker1State extends State<ImagePicker1> {
               _selectedImage != null
                   ? SizedBox(
                       height: MediaQuery.of(context).size.height * 0.4,
-                      child: Image.file(_selectedImage!))
+                      child: Image.file(_selectedImage!),
+                    )
                   : const Text('Please select an Image')
             ],
           ),

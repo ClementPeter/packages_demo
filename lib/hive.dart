@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HivePage(title: 'Hive Demo'),
+      home: const HivePage(title: 'Hive Demo'),
     );
   }
 }

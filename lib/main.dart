@@ -21,10 +21,10 @@ class MyApp extends StatelessWidget {
       ),
       home: const MyHomePage(title: 'Packages Demo'),
       //home: ScrollingIndicatorPage(),
-      // home: const HivePage(title: 'Hive Demo'),
     );
   }
 }
+
 //
 //
 //
@@ -51,8 +51,8 @@ class MyApp extends StatelessWidget {
 //
 //
 //
-//
-// //
+///Hive demo snippet (Buggedd)
+
 // import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 // import 'package:hive_flutter/hive_flutter.dart';
@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
 //       theme: ThemeData(
 //         primarySwatch: Colors.blue,
 //       ),
-//       home: HivePage(title: 'Hive Demo'),
+//       home: const HivePage(title: 'Hive Demo'),
 //     );
 //   }
 // }
@@ -92,7 +92,7 @@ class MyApp extends StatelessWidget {
 // }
 
 // class _HivePageState extends State<HivePage> {
-//   //Reference the created HIVE box to store and extract data
+//   //Reference the created HIVE box to store and extract data from
 //   final shoppingBox = Hive.box('shoppingBox');
 
 //   //Hive storage passes data here to be displayed in the UI
@@ -138,7 +138,7 @@ class MyApp extends StatelessWidget {
 
 //   //controllers
 //   final TextEditingController _nameController = TextEditingController();
-//   TextEditingController _quantityController = TextEditingController();
+//   final TextEditingController _quantityController = TextEditingController();
 
 //   //show form bottom modal sheet
 //   void showForm(BuildContext ctx, int? itemKey) async {
@@ -191,7 +191,7 @@ class MyApp extends StatelessWidget {
 //                     }
 
 //                     if (itemKey != null) {
-//                       updateItem(itemKey, {
+//                       await updateItem(itemKey, {
 //                         "name": _nameController.text,
 //                         "quantity": _quantityController.text,
 //                       });
@@ -253,31 +253,31 @@ class MyApp extends StatelessWidget {
 //               // },
 //             );
 //           }),
-//       floatingActionButton: FloatingActionButton(
-//         isExtended: true,
-//         onPressed: () {
-//           showForm(context, null);
-//         },
-//         child: const Icon(Icons.add),
-//       ),
-//       // floatingActionButton: CustomFAB(
-//       //   scrollController: scrollController,
-//       //   // showForm: (context,null){
-
-//       //   // },
-
+//       // floatingActionButton: FloatingActionButton(
+//       //   isExtended: true,
+//       //   onPressed: () {
+//       //     showForm(context, null);
+//       //   },
+//       //   child: const Icon(Icons.add),
 //       // ),
+//       floatingActionButton: CustomFAB(
+//         scrollController: scrollController,
+//         //showForm: showForm()
+//       ),
 //     );
 //   }
 // }
 
 // class CustomFAB extends StatefulWidget {
-//   CustomFAB(
-//       {super.key, required this.scrollController, required this.showForm});
+//   const CustomFAB({
+//     super.key,
+//     required this.scrollController,
+//     //required this.showForm,
+//   });
 
 //   final ScrollController scrollController;
 
-//   final Function(BuildContext context, int? itemKey) showForm;
+//   showForm(BuildContext context, int? itemKey) {}
 
 //   @override
 //   State<CustomFAB> createState() => _CustomFABState();
@@ -304,7 +304,7 @@ class MyApp extends StatelessWidget {
 //         }
 //       }
 //     });
-//     // TODO: implement initState
+
 //     super.initState();
 //   }
 
@@ -316,8 +316,8 @@ class MyApp extends StatelessWidget {
 //       child: FloatingActionButton(
 //         isExtended: isVisible,
 //         onPressed: () {
-//           // showForm(context, null);
-//           widget.showForm(context, null);
+//           //showForm(context, null);
+//           // widget.showForm();
 //         },
 //         child: const Icon(Icons.add),
 //       ),
